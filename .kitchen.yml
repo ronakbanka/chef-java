@@ -41,24 +41,24 @@ platforms:
 suites:
 - name: openjdk
   excludes: ["fedora-18"]
-  run_list: ["recipe[minitest-handler]", "recipe[java::openjdk]"]
+  run_list: ["recipe[minitest-handler]", "recipe[java]"]
   attributes: {}
 - name: openjdk-7
   excludes: ["ubuntu-10.04", "debian-6"]
-  run_list: ["recipe[minitest-handler]", "recipe[java::openjdk]"]
+  run_list: ["recipe[minitest-handler]", "recipe[java]"]
   attributes:
     java:
       jdk_version: "7"
 
 - name: oracle
-  run_list: ["recipe[minitest-handler]", "recipe[java::oracle]"]
+  run_list: ["recipe[minitest-handler]", "recipe[java]"]
   attributes:
     java:
       oracle:
         accept_oracle_download_terms: true
       install_flavor: "oracle"
 - name: oracle-7
-  run_list: ["recipe[minitest-handler]", "recipe[java::oracle]"]
+  run_list: ["recipe[minitest-handler]", "recipe[java]"]
   attributes:
     java:
       jdk_version: "7"
